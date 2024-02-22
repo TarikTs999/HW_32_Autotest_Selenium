@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using HW_32_Autotest_Selenium_PageObjects;
+using OpenQA.Selenium.DevTools.V119.CSS;
 
 namespace _5ThTest
 {
@@ -15,13 +16,13 @@ namespace _5ThTest
             var searchPage = new SearchPage(driver);
             searchPage.PerformSearch("AR-15");
 
+            
+            string actualHeaderText = searchPage.GetHeaderText();
 
-            //var searchPage = driver.FindElement(searchField);
-            //searchPage.Click();
+            string expectedHeaderText = "Полуавтоматическое оружие модель оружия AR-15";
 
-
-            //  var passIn = driver.FindElement(_passInputButton);
-            //  passIn.SendKeys(_password);
+            
+            Assert.That(expectedHeaderText, Is.EqualTo(actualHeaderText), "Тексти не співпадають");
 
         }
 
