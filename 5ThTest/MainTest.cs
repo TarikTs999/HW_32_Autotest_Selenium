@@ -14,7 +14,6 @@ namespace _5ThTest
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("https://ibis.net.ua/");
-            //driver.Navigate().GoToUrl("https://ibis.net.ua/ua/products/poluavtomaticheskoe/search/");
         }
 
         [TearDown] 

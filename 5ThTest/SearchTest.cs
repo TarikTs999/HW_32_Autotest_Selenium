@@ -16,17 +16,17 @@ namespace _5ThTest
             var searchPage = new SearchPage(driver);
             searchPage.PerformSearch("AR-15");
 
-            
-            string actualHeaderText = searchPage.GetHeaderText();
-
-            string expectedHeaderText = "Полуавтоматическое оружие модель оружия AR-15";
-
-            
-            Assert.That(expectedHeaderText, Is.EqualTo(actualHeaderText), "Тексти не співпадають");
-
         }
 
+        [Test]
+        public void VerifyHeaderText()
+        {
+            SearchPage searchPage = new SearchPage(driver);
+            var actualHeaderText = searchPage.GetHeaderText();
+            var expectedHeaderText = "Полуавтоматическое оружие модель оружия AR-15";
 
-        
+            Assert.That(expectedHeaderText, Is.EqualTo(actualHeaderText), "Тексти не співпадають");
+        }
+ 
     }
 }
