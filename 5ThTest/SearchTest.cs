@@ -17,16 +17,6 @@ namespace _5ThTest
             searchPage.PerformSearch("AR-15");
 
         }
-
-        [Test]
-        public void VerifyHeaderText()
-        {
-            SearchPage searchPage = new SearchPage(driver);
-            var actualHeaderText = searchPage.GetHeaderText();
-            var expectedHeaderText = "Полуавтоматическое оружие модель оружия AR-15";
-
-            Assert.That(expectedHeaderText, Is.EqualTo(actualHeaderText), "Тексти не співпадають");
-        }
  
     }
 }

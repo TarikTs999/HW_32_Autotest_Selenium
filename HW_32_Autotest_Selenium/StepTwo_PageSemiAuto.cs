@@ -1,29 +1,20 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using StepTwoPageSemiAuto;
-
 
 namespace StepTwoPageSemiAuto
 {
-    
-    public class StepTwoPageSemiAuto : StepTwoMainPage
+    public class StepTwoSemiAuto : StepTwoMainPage
     {
-        public StepTwoPageSemiAuto(IWebDriver driverTwo) : base(driverTwo) { }
         private IWebElement headerText => driverTwo.FindElement(By.XPath("//h1[@class='category_name category_name_inline']"));
-        private IWebDriver driverTwo;
 
-        public StepTwoPageSemiAuto(IWebDriver driverTwo)
+        public StepTwoSemiAuto(IWebDriver driverTwo) : base(driverTwo)
         {
-            this.driverTwo = driverTwo;
         }
 
         public string GetHeaderText()
         {
             Console.WriteLine($"headerText: {headerText}");
+            Thread.Sleep(5000);
             return headerText.Text;
         }
     }
