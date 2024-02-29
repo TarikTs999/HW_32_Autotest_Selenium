@@ -17,8 +17,11 @@ namespace _5ThTest
             searchPage.PerformSearch("AR-15");
 
         }
+<<<<<<< HEAD
 
         
+=======
+>>>>>>> eca910d9545db8a580dc1161f94c228dd64f862a
  
     }
 }
