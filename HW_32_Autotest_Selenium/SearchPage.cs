@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace HW_32_Autotest_Selenium_PageObjects
 {
@@ -13,8 +14,8 @@ namespace HW_32_Autotest_Selenium_PageObjects
         public SearchPage(IWebDriver driver) : base(driver) { }
 
         private IWebElement searchField => driver.FindElement(By.XPath("//input[@type='text']"));
-        private IWebElement searchNatoRem => driver.FindElement(By.XPath("//a[@class='adv_search_variant_name' and @href='/ua/products/poluavtomaticheskoe/search/223-rem-sw8/']"));
-
+        
+        
         public void PerformSearch(string searchTerm)
         {
 
@@ -26,12 +27,7 @@ namespace HW_32_Autotest_Selenium_PageObjects
 
         }
         public void OpenSearchPage() { }
-
         
-
-
-
-
 
     }
 }
